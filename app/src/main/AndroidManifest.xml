@@ -24,6 +24,7 @@
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
         <activity android:name="com.qiaop.opensource.post.NewPostActivity"></activity>
         <activity android:name="com.qiaop.opensource.post.BrowsePostActivity"></activity>
+        <activity android:name=".view.ImagePagerActivity" android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

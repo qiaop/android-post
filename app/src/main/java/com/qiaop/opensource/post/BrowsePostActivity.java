@@ -1,11 +1,14 @@
 package com.qiaop.opensource.post;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.qiaop.opensource.post.view.ImagePagerActivity;
 
 /**
  * Created by Administrator on 2016/8/18 0018.
@@ -41,10 +44,10 @@ public class BrowsePostActivity extends Activity{
     public class JsInteration{
         @JavascriptInterface
         public void showBigView(String[] urls,int index){
-//            Intent intent = new Intent(WebBrowsePostActivity.this, ImagePagerActivity.class);
-//            intent.putExtra("urls", urls);
-//            intent.putExtra("position", index);
-//            startActivity(intent);
+            Intent intent = new Intent(BrowsePostActivity.this, ImagePagerActivity.class);
+            intent.putExtra("urls", urls);
+            intent.putExtra("position", index);
+            startActivity(intent);
         }
     }
 }
