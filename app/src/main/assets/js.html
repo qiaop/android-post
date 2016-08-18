@@ -1,0 +1,56 @@
+
+<html>
+<head>
+	<title>ceshi</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>测试</h1>
+
+	<input type="button" value="测试log" onclick="activityList({'key':'value'})">
+	<input type="button" value="showLog" onclick="showLog('hello world')">
+
+	<br>
+	<br>
+	<br>
+
+	<img src="http://img9.dzdwl.com/img/0325zfmv2544.jpg">
+	<img src="http://news.xinhuanet.com/fortune/2014-09/25/127032307_14116116674671n.jpg">
+	<img src="http://bizhi.y999.com/upload/bj/301/960x600/1348150344812.jpg">
+
+	<h1>asdaSD</h1>
+</body>
+<script type="text/javascript">
+	function activityList(){
+		showLog("hello world");
+	}
+
+	function indexOf(arr, str){
+		if (arr && arr.indexOf) {
+			return arr.indexOf(str);
+		}
+
+		var len = arr.length;
+		for(var i = 0; i < arr.length; i ++){
+			if(arr[i] == str){
+				return i;
+			}
+		}
+		return 0;
+	}
+
+	var images = document.getElementsByTagName("img");
+	var urls = new Array();
+	for (var i = 0; i < images.length; i++) {
+		urls.push(images[i].src);
+	}
+
+	for (var i = 0; i < images.length; i++) {
+		images[i].addEventListener('click', function(e, a){
+			var index = indexOf(urls, e.srcElement.src);
+			window.demo.showBigView(urls, index);
+		}, false);
+	}
+
+</script>
+</html>
