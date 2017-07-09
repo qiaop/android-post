@@ -1,4 +1,5 @@
 # Android图文发帖与浏览
+
 ## 简述
 
 很多的社交类项目中都有类似论坛的发帖功能，在探索了很多的实现方式之后找到了一种最为简单的实现。
@@ -17,8 +18,9 @@
 
 Post这个项目主要是利用`richeditor-android`实现了图文混排发帖的功能。
 
-
 ## 发帖
+
+这个帖子的编辑是在APP本地进行的，并不是加载的H5。
 
 ### NewPostActivity
 
@@ -34,6 +36,8 @@ Post这个项目主要是利用`richeditor-android`实现了图文混排发帖�
 1. Post加载的是本地资产文件asset里的一个HTML，这个HTML提供了一个js方法，传递了文章中所有图片的URL。
 2. 在实际开发中，我们可以利用这种方式来传递参数，这里只是一个示例。
 3. 在拿到所有图片URL集合后我们就可以实现点击图片浏览的功能，ImageDetailFragment是一个使用示例，采用Glide加载网络图片。
+
+
 
 ## License
 Copyright 2017 qiaop
