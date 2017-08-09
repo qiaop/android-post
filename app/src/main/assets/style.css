@@ -23,10 +23,10 @@ html {
 img{
  max-width:80%;
  height:auto;
- 
- clear: both; 
- display: block; 
- margin:auto; 
+
+ clear: both;
+ display: block;
+ margin:auto;
 }
 body {
   overflow: scroll;
@@ -40,7 +40,7 @@ body {
   display: table-cell;
 
   -webkit-user-select: auto !important;
-  
+
   -webkit-user-modify: read-write !important;
 
   outline: 0px solid transparent;
